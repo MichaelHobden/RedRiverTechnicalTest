@@ -19,7 +19,8 @@ public class CoffeeMachine {
             "Pour chocolate in the cup", //6
             "Add lemon", //7
             "Add sugar and milk", //8
-    };
+
+            };
     //recipes
     private static final String[][] recipes =
             {{"Lemon Tea", "0,1,4,7"}, {"Coffee", "0,2,5,8"}, {"Chocolate", "0,3,6"}};
@@ -75,9 +76,11 @@ public class CoffeeMachine {
 
     //takes the recipe code and prints out the recipe from the steps
     private static void printRecipe(String recipeCode) {
+        int count = 1;
         for (String step: recipeCode.split(",")
              ) {
-            System.out.println(actions[Integer.parseInt(step)]);
+            System.out.println(""+ count + ": " +actions[Integer.parseInt(step)]);
+            count++;
         }
     }
 }
